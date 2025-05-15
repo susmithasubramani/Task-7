@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class UserInputArrayListClear {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<String> list = new ArrayList<>();
+
+        System.out.print("Enter number of elements to add: ");
+        int n = scanner.nextInt();
+        scanner.nextLine(); // consume newline
+
+        // Input elements from user
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter element " + (i + 1) + ": ");
+            String element = scanner.nextLine();
+            list.add(element);
+        }
+
+        // Print list before clearing
+        System.out.println("ArrayList before clearing: " + list);
+
+        // Clear all elements
+        list.clear();
+
+        // Print list after clearing
+        System.out.println("ArrayList after clearing: " + list);
+
+        scanner.close();
+    }
+}
