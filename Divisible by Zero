@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class SimpleDivision {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read input
+        System.out.print("Enter the first number: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Enter the second number: ");
+        double num2 = scanner.nextDouble();
+
+        // Use if-else to check for zero division
+        if (num2 == 0) {
+            System.out.println("Error: Division by zero is not allowed.");
+        } else {
+            double result = num1 / num2;
+            System.out.printf("Result: %.2f\n", result);
+        }
+
+        scanner.close();
+    }
+}
