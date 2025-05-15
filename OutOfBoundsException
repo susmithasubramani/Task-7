@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class IndexCheckWithIfElse {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Array check
+        int[] numbers = {10, 20, 30};
+        System.out.print("Enter array index (0 to " + (numbers.length - 1) + "): ");
+        int arrayIndex = scanner.nextInt();
+
+        if (arrayIndex >= 0 && arrayIndex < numbers.length) {
+            System.out.println("Array element at index " + arrayIndex + ": " + numbers[arrayIndex]);
+        } else {
+            System.out.println("Error: Invalid array index.");
+        }
+
+        // String check
+        String text = "Java";
+        System.out.print("Enter string index (0 to " + (text.length() - 1) + "): ");
+        int stringIndex = scanner.nextInt();
+
+        if (stringIndex >= 0 && stringIndex < text.length()) {
+            System.out.println("Character at index " + stringIndex + ": " + text.charAt(stringIndex));
+        } else {
+            System.out.println("Error: Invalid string index.");
+        }
+
+        scanner.close();
+    }
+}
