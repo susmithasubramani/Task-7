@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class UserInputListToArray {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        List<String> list = new ArrayList<>();
+
+        System.out.print("Enter the number of items: ");
+        int n = scanner.nextInt();
+        scanner.nextLine(); // Consume newline
+
+        // Get user inputs
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter item " + (i + 1) + ": ");
+            String item = scanner.nextLine();
+            list.add(item);
+        }
+
+        // Convert to array
+        String[] array = list.toArray(new String[0]);
+
+        // Print the array
+        System.out.println("\nConverted array:");
+        for (String item : array) {
+            System.out.println(item);
+        }
+
+        scanner.close();
+    }
+}
